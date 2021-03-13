@@ -5,7 +5,7 @@ import { Box, Text } from "grommet";
 function App() {
   return (
     <Box>
-      <Text size='large'>ergher</Text>
+      <Text size='large'>testing</Text>
     </Box>
   );
 }
