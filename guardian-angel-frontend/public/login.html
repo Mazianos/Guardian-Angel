@@ -1,0 +1,68 @@
+<head>
+    <meta charset="utf-8">
+    <title>Guardian-Angel Login</title>
+
+    <link rel="icon" href="../src/images/purple.png" />
+
+    <!-- Bootstrap for Mobile-first, and JQuery -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+
+    <!-- linking to css file -->
+    <link type="text/css" rel="stylesheet" href="../src/css/login.css" />
+    
+</head>
+
+<body>
+
+    <div class="logo">
+        <a title="Back to Guardian-Angel" href="./index.html"><img src="../src/images/white-logo"></a>
+    </div>
+
+    <div class="text">
+        <p id="text">Guardian-Angel</p>
+    </div>
+
+
+    
+    <div class="authentication">
+        <form>
+        <div class="email">
+            <div class="form-group">
+                <label class="emailLabel" for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" required="required" placeholder="Enter email" />
+            </div>
+        </div>
+        <div class="password">
+            <div class="form-group">
+                <label class="passLabel" for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" required="required" placeholder="Password" />
+            </div>
+        </div>
+        <button type="submit" class="btn-btn-primary">Login</button>
+        <a class="passHelp" href=""><small class="passHelp" class="form-text text-muted">Forgot my password</small></a>
+        </form>
+        
+    </div>
+
+    <input id="backBtn" type="button" value="Back" onclick="history.back()"/>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.3.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.3.0/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+    <!-- Firebase API key information -->
+    <script src="../../../guardian-angel-backend/firebase_api_tp.js"> </script>
+
+
+</body>

@@ -1,0 +1,122 @@
+body {
+    background: #7D4CDB;
+}
+
+.logo img{
+    position: absolute;
+    width: 480px;
+    height: 534.4px;
+    left: 52px;
+    top: 92px;
+}
+
+#text {
+    position: absolute;
+    width: 680px;
+    height: 55px;
+    left: 495px;
+    top: 155px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 71px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.authentication {
+    position: absolute;
+    width: 638px;
+    height: 330px;
+    left: 580px;
+    top: 230px;
+    background-color: #B27AFF;
+}
+
+.emailLabel {
+    width: 300px;
+    height: 20px;
+    padding: 15px;
+    padding-left: 28px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+#exampleInputEmail1 {
+    position: absolute;
+    z-index: 1;
+    width: 546px;
+    height: 52px;
+    margin-top: 20px;
+    margin-left: 28px;
+    border-radius: 4px;
+}
+
+.passLabel {
+    position: absolute;
+    width: 191px;
+    height: 33px;
+    padding: 15px;
+    padding-top: 60px;
+    padding-left: 29px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+#exampleInputPassword1 {
+    position: absolute;
+    width: 546px;
+    height: 52px;
+    margin-top: 105px;
+    margin-left: 28px;
+    border-radius: 4px;
+}
+
+.btn-btn-primary {
+    position: absolute;
+    width: 300px;
+    margin-top: 170px;
+    margin-left: 28px;
+    padding: 10px;
+    background: #7D4CDB;
+    box-shadow: inset 0px 6px 0px rgba(125, 76, 219, 0.3);
+    border-radius: 8px;
+    color: #FFFFFF;
+}
+
+.passHelp {
+    position: absolute;
+    width: 330px;
+    height: 33px;
+    left: 15px;
+    top: 140px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #6233C8;
+}
+
+#backBtn {
+    position: absolute;
+    left: 580px;
+    top: 580px;
+    width: 200px;
+    height: 60px;
+    background: #B27AFF;
+    box-shadow: inset 0px 6px 0px rgba(125, 76, 219, 0.3);
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-size: 23px;
+}
+

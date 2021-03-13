@@ -1,11 +1,12 @@
 import '../css/App.css';
 import { Grommet } from "grommet";
 import { Box, Text } from "grommet";
+import MainHeader from '../components/MainHeader/MainHeader'
 
 function App() {
   return (
     <Box>
-      <Text size='large'>testing</Text>
+      <MainHeader />
     </Box>
   );
 }
