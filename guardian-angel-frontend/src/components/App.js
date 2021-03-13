@@ -1,22 +1,12 @@
 import '../css/App.css';
+import { Grommet } from "grommet";
+import { Box, Text } from "grommet";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <Text size='large'>ergher</Text>
+    </Box>
   );
 }
 
