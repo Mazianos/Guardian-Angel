@@ -5,13 +5,16 @@ import firebase from 'firebase/app'
 
 function MainHeaderButtons({ width, signup, login, map, contactus }) {
 
+
+
     const [email, setEmail] = React.useState(localStorage.getItem('email') ? localStorage.getItem('email') : '');
+
     return (
         <Box>
             {width > 550 ?
                 <Box direction="row" gap='small' style={{ position: 'absolute', right: '10px', top: '8px' }}>
                     {email && email != '' ?
-                        <div>
+                        <Box direction='row' gap="xsmall">
 
                             <Text>{email}</Text>
                             <Button
@@ -19,9 +22,9 @@ function MainHeaderButtons({ width, signup, login, map, contactus }) {
                                 primary
                                 onClick={() => { localStorage.setItem('email', ''); setEmail('') }}
                                 style={{ padding: '5px', border: '2px solid white' }}><Text color='white'>logout</Text></Button>
-                        </div>
+                        </Box >
                         :
-                        <Box direction='row'>
+                        <Box direction='row' gap="xsmall">
                             <Button
                                 color='#B27AFF'
                                 primary

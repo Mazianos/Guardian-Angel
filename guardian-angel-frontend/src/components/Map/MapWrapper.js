@@ -57,7 +57,8 @@ class MapWrapper extends Component {
                         </Box>
                         <Image
                             src="https://images.otstatic.com/prod/26601330/3/medium.jpg"
-                            fit
+                            fit='cover'
+
                             style={{ borderRadius: '20px' }}
                             alignSelf='center'
                         ></Image>
@@ -82,7 +83,8 @@ class MapWrapper extends Component {
                         </Box>
                         <Image
                             src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
-                            fit
+                            fit='cover'
+
                             style={{ borderRadius: '20px' }}
                             alignSelf='center'
                         ></Image>

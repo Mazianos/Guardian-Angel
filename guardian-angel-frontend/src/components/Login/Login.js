@@ -31,6 +31,13 @@ function Login() {
         () => setReveal(false),
         10
     );
+
+    function refreshPage() {
+        setTimeout(() => {
+            window.location.reload(false);
+        }, 500);
+        console.log('page to reload')
+    }
     AOS.init();
 
     return (
@@ -107,7 +114,7 @@ function Login() {
                         label="Login"
                         secondary
                         disabled={!text.includes("@")}
-                        onClick={() => handleSignUp()} />
+                        onClick={() => { handleSignUp(); refreshPage() }} />
                 </div>
             </Box>
         </Box >
