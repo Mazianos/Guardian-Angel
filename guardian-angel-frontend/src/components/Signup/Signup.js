@@ -5,6 +5,10 @@ import PasswordTextBox from './PasswordTextBox'
 function Signup() {
     const [text, setText] = React.useState('');
 
+    function logSignup() {
+        console.log("Testing!");
+    }
+
     return (
         <Box background="#7D4CDB" style={{
             height: '100vh'
@@ -54,7 +58,12 @@ function Signup() {
             </Box>
             <Box width='small' margin="small" align="center">
 
-                <Button type="submit" label="Create account" secondary />
+                <Button 
+                    type="submit"
+                    label="Create account"
+                    secondary
+                    disabled={!text.includes("@")}
+                    onClick={() => logSignup()} />
             </Box>
         </Box >
     );
