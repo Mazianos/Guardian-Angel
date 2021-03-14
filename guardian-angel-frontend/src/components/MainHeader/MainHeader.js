@@ -35,6 +35,7 @@ class MainHeader extends React.Component {
                         login={this.props.login}
                         map={this.props.map}
                         contactus={this.props.contactus}
+                        logout={this.props.logout}
                     />
                 </Box>
 
