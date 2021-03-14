@@ -3,8 +3,8 @@ import { Box, Text, Image, Button, Avatar, Grommet } from 'grommet';
 import MainHeaderButtons from './MainHeaderButtons'
 
 class MainHeader extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             width: 0,
             height: 0
@@ -29,7 +29,13 @@ class MainHeader extends React.Component {
                 <Box direction='row' gap='small' margin={{ vertical: 'auto' }}>
                     <Avatar round='auto' src="../../../GAlogo.png" size="small" margin={{ vertical: 'auto' }}></Avatar>
                     <Text size="medium" weight="bold" margin={{ vertical: 'auto' }}>Guardian Angel</Text>
-                    <MainHeaderButtons width={this.state.width} />
+                    <MainHeaderButtons
+                        width={this.state.width}
+                        signup={this.props.signup}
+                        login={this.props.login}
+                        map={this.props.map}
+                        contactus={this.props.contactus}
+                    />
                 </Box>
 
             </Box >
