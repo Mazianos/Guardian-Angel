@@ -3,7 +3,7 @@ import { Box, Text, Image, Button, Avatar, Grommet, Menu } from 'grommet';
 import { Apps } from 'grommet-icons';
 
 
-function MainHeaderButtons({ width }) {
+function MainHeaderButtons({ width, signup, login, map, contactus }) {
 
 
     return (
@@ -11,29 +11,21 @@ function MainHeaderButtons({ width }) {
             {width > 550 ?
                 <Box direction="row" gap='small' style={{ position: 'absolute', right: '10px', top: '8px' }}>
                     <Button
+                        color='#B27AFF'
                         primary
-                        size='small'
-                        color="#B27AFF"
-                        label="Login / Signup"
-
-                    >
-                    </Button>
+                        style={{ padding: '5px', border: '2px solid white' }}>{signup}</Button>
                     <Button
+                        color='#B27AFF'
                         primary
-                        size='small'
-                        color="#B27AFF"
-                        label="Register"
-
-                    >
-                    </Button>
+                        style={{ padding: '5px', border: '2px solid white' }}>{login}</Button>
                     <Button
+                        color='#B27AFF'
                         primary
-                        size='small'
-                        color="#B27AFF"
-                        label="Contact Us"
-
-                    >
-                    </Button>
+                        style={{ padding: '5px', border: '2px solid white' }}>{map}</Button>
+                    <Button
+                        color='#B27AFF'
+                        primary
+                        style={{ padding: '5px', border: '2px solid white' }}>{contactus}</Button>
                 </Box>
                 :
                 <Box direction="row" gap='small' style={{ position: 'absolute', right: '10px', top: '8px' }}>
