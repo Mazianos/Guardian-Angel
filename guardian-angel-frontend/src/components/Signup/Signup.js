@@ -4,6 +4,8 @@ import { Box, Text, Heading, FormField, TextInput, Grommet, Button } from "gromm
 import { Hide, View } from 'grommet-icons';
 import firebase from "firebase/app";
 import { useHistory } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Signup() {
     const [text, setText] = React.useState('');
@@ -13,9 +15,9 @@ function Signup() {
     const handleSignUp = async () => {
         try {
             await firebase.auth().createUserWithEmailAndPassword(text, value);
-            let path = '/'; 
+            let path = '/';
             history.push(path);
-            
+
         } catch (error) {
             alert(error);
         }
@@ -25,6 +27,7 @@ function Signup() {
         () => setReveal(false),
         200
     );
+    AOS.init();
 
 
     return (
@@ -34,11 +37,12 @@ function Signup() {
             align='center'>
             <Box width="large" align='Start' >
                 <Box margin="large">
-
-                    <Heading
-                        size="medium"
-                    >Sign up
+                    <div data-aos="fade-down">
+                        <Heading
+                            size="medium"
+                        >Sign up
                     </Heading>
+                    </div>
 
                     <Grommet
                         theme={
@@ -52,52 +56,58 @@ function Signup() {
                             }
                         }
                     >
+                        <div data-aos="fade-up-right">
 
-                        <FormField label="Email address">
-                            <Box>
-                                <TextInput
-                                    plain
-                                    style={{ borderRadius: "12px" }}
-                                    value={text}
-                                    onChange={event => setText(event.target.value)}
-                                    placeholder="type here"
+                            <FormField label="Email address">
+                                <Box>
+                                    <TextInput
+                                        plain
+                                        style={{ borderRadius: "12px" }}
+                                        value={text}
+                                        onChange={event => setText(event.target.value)}
+                                        placeholder="type here"
 
-                                />
-                            </Box>
-                        </FormField>
+                                    />
+                                </Box>
+                            </FormField>
+                        </div>
 
+                        <div data-aos="fade-up-left">
 
-                        <FormField label="Password">
-                            <Box
-                                direction='row'
-                            >
-                                <TextInput
-                                    plain
-                                    style={{ borderRadius: "12px" }}
-                                    type={reveal ? 'text' : 'password'}
-                                    value={value}
-                                    onChange={event => setValue(event.target.value)}
-                                    placeholder="type here"
-                                    disabled={text.length == 0}
+                            <FormField label="Password">
+                                <Box
+                                    direction='row'
+                                >
+                                    <TextInput
+                                        plain
+                                        style={{ borderRadius: "12px" }}
+                                        type={reveal ? 'text' : 'password'}
+                                        value={value}
+                                        onChange={event => setValue(event.target.value)}
+                                        placeholder="type here"
+                                        disabled={text.length == 0}
 
-                                />
-                                <Button
-                                    icon={reveal ? <View size="medium" color="white" /> : <Hide size="medium" color="white" />}
-                                    onClick={() => setReveal(!reveal)}
-                                />
-                            </Box>
-                        </FormField>
+                                    />
+                                    <Button
+                                        icon={reveal ? <View size="medium" color="white" /> : <Hide size="medium" color="white" />}
+                                        onClick={() => setReveal(!reveal)}
+                                    />
+                                </Box>
+                            </FormField>
+                        </div>
                     </Grommet>
                 </Box>
             </Box>
             <Box width='small' margin="small" align="center">
+                <div data-aos="fade-up">
 
-                <Button
-                    type="submit"
-                    label="Create account"
-                    secondary
-                    disabled={!text.includes("@")}
-                    onClick={() => handleSignUp()} />
+                    <Button
+                        type="submit"
+                        label="Create account"
+                        secondary
+                        disabled={!text.includes("@")}
+                        onClick={() => handleSignUp()} />
+                </div>
             </Box>
         </Box >
     );
