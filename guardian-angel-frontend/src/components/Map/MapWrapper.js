@@ -75,9 +75,9 @@ class MapWrapper extends Component {
                         <Box gap='xsmall'>
                             <Text weight='bold'>Cactus Club</Text>
                             <Text weight='normal' size="small">Angel Shot ✔️</Text>
-                            <Text weight='normal' size="small">Hours: 9:00am-5:00pm</Text>
                             <Text weight='normal' size="small" >Location:  101 Schoolhouse St #110</Text>
                             <Text weight='normal' size="small" >Coquitlam, BC V3K 4X8</Text>
+                            <Text weight='normal' size="small">Hours: 9:00am-5:00pm</Text>
                             <Text weight='normal' size="small">⭐⭐⭐⭐</Text>
                         </Box>
                         <Image
