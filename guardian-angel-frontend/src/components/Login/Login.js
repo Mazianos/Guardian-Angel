@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import { Box, Text, Heading, FormField, TextInput, Grommet, Button } from "grommet";
 import PasswordTextBox from './PasswordTextBox'
 
-function Signup() {
+function Login() {
     const [text, setText] = React.useState('');
+
+    function logSignup() {
+        console.log("Testing!");
+    }
 
     return (
         <Box background="#7D4CDB" style={{
@@ -54,11 +58,16 @@ function Signup() {
             </Box>
             <Box width='small' margin="small" align="center">
 
-                <Button type="submit" label="Create account" secondary />
+                <Button 
+                    type="submit"
+                    label="Create account"
+                    secondary
+                    disabled={!text.includes("@")}
+                    onClick={() => logSignup()} />
             </Box>
         </Box >
     );
 }
 
-export default Signup;
+export default Login;
 

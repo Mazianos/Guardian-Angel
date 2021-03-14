@@ -47,7 +47,7 @@ body {
     color: #FFFFFF;
 }
 
-#exampleInputEmail1 {
+#signupEmail {
     position: absolute;
     z-index: 1;
     width: 546px;
@@ -72,7 +72,7 @@ body {
     color: #FFFFFF;
 }
 
-#exampleInputPassword1 {
+#signupPassword {
     position: absolute;
     width: 546px;
     height: 52px;
