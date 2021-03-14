@@ -1,10 +1,6 @@
 
-import React, { Component, useCallback } from 'react';
-import app from "../../firebase";
+import React from 'react';
 import { Box, Text, Heading, FormField, TextInput, Grommet, Button } from "grommet";
-import { Hide, View } from 'grommet-icons';
-import firebase from "firebase/app";
-import { useHistory } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
