@@ -17,7 +17,7 @@ function App() {
         <Router>
           <MainHeader
             signup={<Link to="/signup" style={style} >Signup</Link>}
-            login={<Link to="/login" style={style}>Login</Link>}
+            login={<Link to="/login" refresh='true' style={style}>Login</Link>}
             map={<Link to="/" style={style}>Home</Link>}
             contactus={<Link to="/contactus" style={style}>Contact us</Link>}
           />
