@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { Apps } from 'grommet-icons';
 
 // const Marker = ({ text }) => <div>{text}</div>;
 const Marker = () =>
