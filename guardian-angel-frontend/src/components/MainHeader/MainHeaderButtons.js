@@ -1,16 +1,27 @@
 import React from "react";
 import { Box, Text, Image, Button, Avatar, Grommet, Menu } from 'grommet';
 import { Apps } from 'grommet-icons';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Signup from '../Signup/Signup'
+import Map from '../Map/Map'
 
 
-function MainHeaderButtons({ width }) {
+function MainHeaderButtons({ signup, login, map, contactus, width }) {
 
 
     return (
         <Box>
+
+
+
             {width > 550 ?
-                <Box direction="row" gap='small' style={{ position: 'absolute', right: '10px', top: '8px' }}>
-                    <Button
+                < Box direction="row" gap='small' style={{ position: 'absolute', right: '10px', top: '8px' }}>
+                    {map}
+                    {signup}
+                    {contactus}
+                    {login}
+                    {/* <Button
                         primary
                         size='small'
                         color="#B27AFF"
@@ -18,6 +29,8 @@ function MainHeaderButtons({ width }) {
 
                     >
                     </Button>
+
+
                     <Button
                         primary
                         size='small'
@@ -33,8 +46,10 @@ function MainHeaderButtons({ width }) {
                         label="Contact Us"
 
                     >
-                    </Button>
+                    </Button> */}
+
                 </Box>
+
                 :
                 <Box direction="row" gap='small' style={{ position: 'absolute', right: '10px', top: '8px' }}>
                     <Menu
@@ -50,7 +65,7 @@ function MainHeaderButtons({ width }) {
                     </Menu>
                 </Box>
             }
-        </Box>
+        </Box >
 
     )
 }
