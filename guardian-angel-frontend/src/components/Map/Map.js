@@ -22,7 +22,7 @@ class Map extends Component {
     render() {
         return (
             // Important! Always set the container height explicitly
-            <Box style={{ height: '97vh', width: '100%' }}>
+            <Box style={{ height: this.props.width && this.props.width > 450 ? '95vh' : '94vh', width: '100%' }}>
 
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: process.env.REACT_APP_GoogleMaps }}
