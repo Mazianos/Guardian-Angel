@@ -5,7 +5,7 @@ import { Hide, View } from 'grommet-icons';
 import firebase from "firebase/app";
 import { useHistory } from "react-router-dom";
 
-function Login() {
+function Signup() {
     const [text, setText] = React.useState('');
     const [value, setValue] = React.useState('');
     const [reveal, setReveal] = React.useState(true);
@@ -103,5 +103,5 @@ function Login() {
     );
 }
 
-export default Login;
+export default Signup;
 
