@@ -15,14 +15,10 @@ function Login() {
     const handleSignUp = async () => {
         try {
             await firebase.auth().signInWithEmailAndPassword(text, value);
-<<<<<<< HEAD
             if (firebase.auth().currentUser != null) {
                 await console.log(firebase.auth().currentUser.email);
             }
             let path = '/'; 
-=======
-            let path = '/';
->>>>>>> db5806f8c9d76440c4fe33f9c8f3f72eccd1d540
             history.push(path);
 
         } catch (error) {
