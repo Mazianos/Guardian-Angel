@@ -1,15 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component, useCallback } from 'react';
+import app from "../../firebase";
 import { Box, Text, Heading, FormField, TextInput, Grommet, Button } from "grommet";
 import { Hide, View } from 'grommet-icons';
+import firebase from "firebase/app";
 
 function Login() {
     const [text, setText] = React.useState('');
     const [value, setValue] = React.useState('');
     const [reveal, setReveal] = React.useState(true);
-
-    function logSignup() {
-        console.log("Testing!");
-    }
+    const handleSignUp = async () => {
+        try {
+            await firebase.auth().createUserWithEmailAndPassword(text, value);
+        } catch (error) {
+            alert(error);
+        }
+    };
 
     setTimeout(
         () => setReveal(false),
@@ -88,7 +93,7 @@ function Login() {
                     label="Create account"
                     secondary
                     disabled={!text.includes("@")}
-                    onClick={() => logSignup()} />
+                    onClick={() => handleSignUp()} />
             </Box>
         </Box >
     );

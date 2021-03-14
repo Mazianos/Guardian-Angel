@@ -7,11 +7,7 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { AuthProvider } from '../auth';
 import { Link } from 'react-router-dom';
 import Signup from './Signup/Signup'
-<<<<<<< HEAD
-
-=======
 const style = { textDecoration: 'none', color: 'white' };
->>>>>>> 78f8d98df8e54717fb3e82e773312637987b72be
 
 function App() {
 
@@ -30,10 +26,6 @@ function App() {
           <Route path="/signup" exact component={Signup} />
         </Router>
       </Box>
-<<<<<<< HEAD
-=======
-
->>>>>>> 78f8d98df8e54717fb3e82e773312637987b72be
     </AuthProvider>
   );
 }
