@@ -13,6 +13,9 @@ function Login() {
     const handleSignUp = async () => {
         try {
             await firebase.auth().signInWithEmailAndPassword(text, value);
+            if (firebase.auth().currentUser != null) {
+                await console.log(firebase.auth().currentUser.email);
+            }
             let path = '/'; 
             history.push(path);
             
