@@ -5,6 +5,7 @@ import { Apps } from 'grommet-icons';
 
 function MainHeaderButtons({ width }) {
 
+
     return (
         <Box>
             {width > 550 ?
