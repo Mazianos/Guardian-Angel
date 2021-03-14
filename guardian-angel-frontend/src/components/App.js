@@ -5,14 +5,18 @@ import MainHeader from '../components/MainHeader/MainHeader'
 import Map from '../components/Map/Map'
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Login from './Login/Login'
+<<<<<<< HEAD
 import { AuthProvider } from '../auth';
 import { Link } from 'react-router-dom';
 import Signup from './Signup/Signup'
+=======
+>>>>>>> parent of ff8c1a0 (connected router to pages)
 
 
 function App() {
 
   return (
+<<<<<<< HEAD
     <AuthProvider>
       <Box>
         <Router>
@@ -29,6 +33,17 @@ function App() {
         </Router>
       </Box>
     </AuthProvider>
+=======
+    <Box>
+      <MainHeader />
+      <Router>
+
+        <Route path="/" exact component={Map} />
+        <Route path="/login" exact component={Login} />
+
+      </Router>
+    </Box>
+>>>>>>> parent of ff8c1a0 (connected router to pages)
   );
 }
 

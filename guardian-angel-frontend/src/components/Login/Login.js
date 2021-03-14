@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Box, Text, Heading, FormField, TextInput, Grommet, Button } from "grommet";
 import PasswordTextBox from './PasswordTextBox'
 
-function Signup() {
+function Login() {
     const [text, setText] = React.useState('');
 
     function logSignup() {
@@ -69,5 +69,5 @@ function Signup() {
     );
 }
 
-export default Signup;
+export default Login;
 
