@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import { Apps } from 'grommet-icons';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+// const Marker = ({ text }) => <div>{text}</div>;
+const Marker = () => <img src='../../../primary-marker.png'></img>;
 
 class Map extends Component {
     static defaultProps = {
@@ -21,10 +23,11 @@ class Map extends Component {
                     defaultCenter={this.props.center}
                     defaultZoom={this.props.zoom}
                 >
-                    <AnyReactComponent
+                    <Marker
                         lat={49.24966}
                         lng={-123.11934}
-                        text="My Marker"
+                        // text="My Marker"
+                        style={{ position: "absolute", transform: "translate(-50%, -100%)" }}
                     />
                 </GoogleMapReact>
             </div>
