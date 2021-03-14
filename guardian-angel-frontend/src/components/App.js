@@ -1,11 +1,12 @@
 import '../css/App.css';
 import { Box, Text } from "grommet";
-import MainHeader from '../components/MainHeader/MainHeader'
-import MapWrapper from '../components/Map/MapWrapper'
+import MainHeader from '../components/MainHeader/MainHeader';
+import MapWrapper from '../components/Map/MapWrapper';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { AuthProvider } from '../auth';
 import { Link } from 'react-router-dom';
-import Signup from './Signup/Signup'
+import Signup from './Signup/Signup';
+import Login from './Login/Login';
 const style = { textDecoration: 'none', color: 'white' };
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 
           <Route path="/" exact component={MapWrapper} />
           <Route path="/signup" exact component={Signup} />
+          <Route path="/login" exact component={Login} />
         </Router>
       </Box>
     </AuthProvider>

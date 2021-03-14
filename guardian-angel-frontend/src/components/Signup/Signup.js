@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-function Login() {
+function Signup() {
     const [text, setText] = React.useState('');
     const [value, setValue] = React.useState('');
     const [reveal, setReveal] = React.useState(true);
@@ -113,5 +113,5 @@ function Login() {
     );
 }
 
-export default Login;
+export default Signup;
 
