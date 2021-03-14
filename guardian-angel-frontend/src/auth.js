@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import app from "./firebase.js";
+import app from "./firebase";
 
 //Allows us to propogate this data across the entire tree of components
 export const AuthContext = React.createContext();
