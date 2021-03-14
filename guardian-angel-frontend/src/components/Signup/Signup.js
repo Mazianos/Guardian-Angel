@@ -45,7 +45,6 @@ function Login() {
 
                         <FormField label="Email address">
                             <Box>
-
                                 <TextInput
                                     plain
                                     style={{ borderRadius: "12px" }}
