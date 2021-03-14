@@ -16,9 +16,14 @@ function Login() {
         try {
             await firebase.auth().signInWithEmailAndPassword(text, value);
             if (firebase.auth().currentUser != null) {
-                await console.log(firebase.auth().currentUser.email);
+                console.log(firebase.auth().currentUser.email);
+                localStorage.setItem('email', firebase.auth().currentUser.email)
             }
+<<<<<<< HEAD
             let path = '/'; 
+=======
+            let path = '/';
+>>>>>>> cce86877e14bb5381c54f4e83544ba4817accbc3
             history.push(path);
 
         } catch (error) {
@@ -28,16 +33,16 @@ function Login() {
 
     setTimeout(
         () => setReveal(false),
-        200
+        10
     );
-
+    AOS.init();
 
     return (
         <Box background="#7D4CDB" style={{
             height: '100vh'
         }}
             align='center'>
-            <Box width="large" align='Start' >
+            <Box width="large" align='start' >
                 <Box margin="large">
                     <div data-aos="fade-down">
                         <Heading

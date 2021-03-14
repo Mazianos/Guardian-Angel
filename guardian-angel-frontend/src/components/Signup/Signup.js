@@ -23,9 +23,13 @@ function Signup() {
         }
     };
 
+    // setTimeout(
+    //     () => setReveal(false),
+    //     200
+    // );
     setTimeout(
         () => setReveal(false),
-        200
+        10
     );
     AOS.init();
 
@@ -35,7 +39,7 @@ function Signup() {
             height: '100vh'
         }}
             align='center'>
-            <Box width="large" align='Start' >
+            <Box width="large" align='start' >
                 <Box margin="large">
                     <div data-aos="fade-down">
                         <Heading

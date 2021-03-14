@@ -1,23 +1,38 @@
 import React from "react";
 import { Box, Text, Image, Button, Avatar, Grommet, Menu } from 'grommet';
 import { Apps } from 'grommet-icons';
-
+import firebase from 'firebase/app'
 
 function MainHeaderButtons({ width, signup, login, map, contactus }) {
 
-
+    const [email, setEmail] = React.useState(localStorage.getItem('email') ? localStorage.getItem('email') : '');
     return (
         <Box>
             {width > 550 ?
                 <Box direction="row" gap='small' style={{ position: 'absolute', right: '10px', top: '8px' }}>
-                    <Button
-                        color='#B27AFF'
-                        primary
-                        style={{ padding: '5px', border: '2px solid white' }}>{signup}</Button>
-                    <Button
-                        color='#B27AFF'
-                        primary
-                        style={{ padding: '5px', border: '2px solid white' }}>{login}</Button>
+                    {email && email != '' ?
+                        <div>
+
+                            <Text>{email}</Text>
+                            <Button
+                                color='#B27AFF'
+                                primary
+                                onClick={() => { localStorage.setItem('email', ''); setEmail('') }}
+                                style={{ padding: '5px', border: '2px solid white' }}><Text color='white'>logout</Text></Button>
+                        </div>
+                        :
+                        <Box direction='row'>
+                            <Button
+                                color='#B27AFF'
+                                primary
+                                style={{ padding: '5px', border: '2px solid white' }}>{signup}</Button>
+                            <Button
+                                color='#B27AFF'
+                                primary
+                                style={{ padding: '5px', border: '2px solid white' }}>{login}</Button>
+                        </Box>
+                    }
+
                     <Button
                         color='#B27AFF'
                         primary
