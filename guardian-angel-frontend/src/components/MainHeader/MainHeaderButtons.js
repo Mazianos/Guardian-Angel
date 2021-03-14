@@ -3,7 +3,7 @@ import { Box, Text, Image, Button, Avatar, Grommet, Menu } from 'grommet';
 import { Apps } from 'grommet-icons';
 import firebase from 'firebase/app'
 
-function MainHeaderButtons({ width, signup, login, map, contactus, logout }) {
+function MainHeaderButtons({ width, signup, login, map, faq, logout }) {
 
 
 
@@ -16,7 +16,7 @@ function MainHeaderButtons({ width, signup, login, map, contactus, logout }) {
                     {email && email != '' ?
                         <Box direction='row' gap="xsmall">
 
-                            <Text>{email}</Text>
+                            <Text weight="bold" margin={{ top: '5px' }}>{email}</Text>
                             <Button
                                 color='#B27AFF'
                                 primary
@@ -43,7 +43,7 @@ function MainHeaderButtons({ width, signup, login, map, contactus, logout }) {
                     <Button
                         color='#B27AFF'
                         primary
-                        style={{ padding: '5px', border: '2px solid white' }}>{contactus}</Button>
+                        style={{ padding: '5px', border: '2px solid white' }}>{faq}</Button>
                 </Box>
                 :
                 <Box direction="row" gap='small' style={{ position: 'absolute', right: '10px', top: '8px' }}>
