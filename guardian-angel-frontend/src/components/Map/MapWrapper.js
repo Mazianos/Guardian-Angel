@@ -11,17 +11,16 @@ class MapWrapper extends Component {
         return (
             <Box >
                 <Box
-                    border
                     background="#481EA8"
                     style={{ position: 'absolute', zIndex: 1 }}
-                    size="medium"
                     margin={{ top: 'medium', left: 'medium' }}
                     round
                     align='center'
                     gap='small'
-                    pad={{ bottom: 'medium' }}
+                    pad='small'
                 >
-                    <Box direction='row' gap="small">
+                    <Box direction='row' gap="small"
+                    >
                         <Grommet theme={{ textInput: { extend: () => `font-size: 20px;`, } }}>
                             <Box
                                 margin={{ top: 'small', left: 'small' }}
@@ -49,8 +48,10 @@ class MapWrapper extends Component {
 
                     >
                         <Box gap='xsmall'>
-                            <Text weight='bold'>Resturant name</Text>
+                            <Text weight='bold'>Earls Kitchen + Bar</Text>
                             <Text weight='normal' size="small">Angel Shot ✔️</Text>
+                            <Text weight='normal' size="small" >Location: 2850 Shaughnessy St #5100</Text>
+                            <Text weight='normal' size="small" >Port Coquitlam,BC V3C 6K5</Text>
                             <Text weight='normal' size="small">Hours: 9:00am-5:00pm</Text>
                             <Text weight='normal' size="small">⭐⭐⭐</Text>
                         </Box>
@@ -58,6 +59,7 @@ class MapWrapper extends Component {
                             src="https://images.otstatic.com/prod/26601330/3/medium.jpg"
                             fit
                             style={{ borderRadius: '20px' }}
+                            alignSelf='center'
                         ></Image>
                     </Box>
 
@@ -71,15 +73,18 @@ class MapWrapper extends Component {
                         style={{ overflow: 'hidden', width: '20vw' }}
                     >
                         <Box gap='xsmall'>
-                            <Text weight='bold'>Resturant name</Text>
+                            <Text weight='bold'>Cactus Club</Text>
                             <Text weight='normal' size="small">Angel Shot ✔️</Text>
                             <Text weight='normal' size="small">Hours: 9:00am-5:00pm</Text>
-                            <Text weight='normal' size="small">⭐⭐⭐</Text>
+                            <Text weight='normal' size="small" >Location:  101 Schoolhouse St #110</Text>
+                            <Text weight='normal' size="small" >Coquitlam, BC V3K 4X8</Text>
+                            <Text weight='normal' size="small">⭐⭐⭐⭐</Text>
                         </Box>
                         <Image
-                            src="https://images.otstatic.com/prod/26601330/3/medium.jpg"
+                            src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
                             fit
                             style={{ borderRadius: '20px' }}
+                            alignSelf='center'
                         ></Image>
                     </Box>
                 </Box>
