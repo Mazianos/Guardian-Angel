@@ -16,7 +16,7 @@ function Login() {
         try {
             await firebase.auth().signInWithEmailAndPassword(text, value);
             if (firebase.auth().currentUser != null) {
-                await console.log(firebase.auth().currentUser.email);
+                console.log(firebase.auth().currentUser.email);
                 localStorage.setItem('email', firebase.auth().currentUser.email)
             }
             let path = '/';

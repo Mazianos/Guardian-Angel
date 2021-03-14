@@ -16,11 +16,11 @@ function MainHeaderButtons({ width, signup, login, map, contactus }) {
                     {email && email != '' ?
                         <Box direction='row' gap="xsmall">
 
-                            <Text>{firebase.auth().currentUser.email}</Text>
+                            <Text>{email}</Text>
                             <Button
                                 color='#B27AFF'
                                 primary
-                                onClick={() => { firebase.auth().signOut() }}
+                                onClick={() => { localStorage.setItem('email', ''); setEmail(''); firebase.auth().currentUser.signOut() }}
                                 style={{ padding: '5px', border: '2px solid white' }}><Text color='white'>logout</Text></Button>
                         </Box >
                         :
