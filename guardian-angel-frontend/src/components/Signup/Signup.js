@@ -3,14 +3,19 @@ import app from "../../firebase";
 import { Box, Text, Heading, FormField, TextInput, Grommet, Button } from "grommet";
 import { Hide, View } from 'grommet-icons';
 import firebase from "firebase/app";
+import { useHistory } from "react-router-dom";
 
 function Login() {
     const [text, setText] = React.useState('');
     const [value, setValue] = React.useState('');
     const [reveal, setReveal] = React.useState(true);
+    const history = useHistory();
     const handleSignUp = async () => {
         try {
             await firebase.auth().createUserWithEmailAndPassword(text, value);
+            let path = '/'; 
+            history.push(path);
+            
         } catch (error) {
             alert(error);
         }
