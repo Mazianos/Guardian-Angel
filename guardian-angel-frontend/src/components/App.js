@@ -1,8 +1,7 @@
 import '../css/App.css';
-import { Grommet } from "grommet";
 import { Box, Text } from "grommet";
 import MainHeader from '../components/MainHeader/MainHeader'
-import Map from '../components/Map/Map'
+import MapWrapper from '../components/Map/MapWrapper'
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { AuthProvider } from '../auth';
 import { Link } from 'react-router-dom';
@@ -22,7 +21,7 @@ function App() {
             contactus={<Link to="/contactus" style={style}>Contact us</Link>}
           />
 
-          <Route path="/" exact component={Map} />
+          <Route path="/" exact component={MapWrapper} />
           <Route path="/signup" exact component={Signup} />
         </Router>
       </Box>

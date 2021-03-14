@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import { Box, Text } from "grommet";
 
 // const Marker = ({ text }) => <div>{text}</div>;
 const Marker = () =>
@@ -21,7 +22,8 @@ class Map extends Component {
     render() {
         return (
             // Important! Always set the container height explicitly
-            <div style={{ height: '95vh', width: '100%' }}>
+            <Box style={{ height: '97vh', width: '100%' }}>
+
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: process.env.REACT_APP_GoogleMaps }}
                     defaultCenter={this.props.center}
@@ -34,7 +36,7 @@ class Map extends Component {
 
                     />
                 </GoogleMapReact>
-            </div>
+            </Box>
         );
     }
 }
