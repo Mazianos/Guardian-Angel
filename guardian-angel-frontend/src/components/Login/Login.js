@@ -16,14 +16,10 @@ function Login() {
         try {
             await firebase.auth().signInWithEmailAndPassword(text, value);
             if (firebase.auth().currentUser != null) {
-                console.log(firebase.auth().currentUser.email);
+                await console.log(firebase.auth().currentUser.email);
                 localStorage.setItem('email', firebase.auth().currentUser.email)
             }
-<<<<<<< HEAD
-            let path = '/'; 
-=======
             let path = '/';
->>>>>>> cce86877e14bb5381c54f4e83544ba4817accbc3
             history.push(path);
 
         } catch (error) {

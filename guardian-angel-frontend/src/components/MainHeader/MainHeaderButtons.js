@@ -5,19 +5,19 @@ import firebase from 'firebase/app'
 
 function MainHeaderButtons({ width, signup, login, map, contactus }) {
 
-    const [email, setEmail] = React.useState(localStorage.getItem('email') ? localStorage.getItem('email') : '');
+    
     return (
         <Box>
             {width > 550 ?
                 <Box direction="row" gap='small' style={{ position: 'absolute', right: '10px', top: '8px' }}>
-                    {email && email != '' ?
+                    {firebase.auth().currentUser != null ?
                         <div>
 
-                            <Text>{email}</Text>
+                            <Text>{firebase.auth().currentUser.email}</Text>
                             <Button
                                 color='#B27AFF'
                                 primary
-                                onClick={() => { localStorage.setItem('email', ''); setEmail('') }}
+                                onClick={() => { firebase.auth().signOut() }}
                                 style={{ padding: '5px', border: '2px solid white' }}><Text color='white'>logout</Text></Button>
                         </div>
                         :
