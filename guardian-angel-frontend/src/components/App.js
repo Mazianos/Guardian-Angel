@@ -11,12 +11,7 @@ const style = { textDecoration: 'none', color: 'white' };
 
 function App() {
 
-  function refreshPage() {
-    setTimeout(() => {
-      window.location.reload(false);
-    }, 500);
-    console.log('page to reload')
-  }
+
 
   return (
     <AuthProvider>
@@ -24,8 +19,9 @@ function App() {
         <Router>
           <MainHeader
             signup={<Link to="/signup" style={style} >Signup</Link>}
-            login={<Link to="/login" onClick={() => refreshPage()} style={style}>Login</Link>}
+            login={<Link to="/login" style={style}>Login</Link>}
             map={<Link to="/" style={style}>Home</Link>}
+            logout={<Link to="/" style={style}>Logout</Link>}
             contactus={<Link to="/contactus" style={style}>Contact us</Link>}
           />
 
