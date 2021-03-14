@@ -13,7 +13,6 @@ class MainHeader extends React.Component {
     }
     componentDidMount() {
         this.update();
-        console.log(process.env);
     }
     update = () => {
         this.setState({
@@ -27,8 +26,8 @@ class MainHeader extends React.Component {
         return (
             <Box background="#7D4CDB" height='xxsmall' pad='xsmall'>
                 <Box direction='row' gap='small' margin={{ vertical: 'auto' }}>
-                    <Avatar round='auto' src="../../../GAlogo.png" size="small" margin={{ vertical: 'auto' }}></Avatar>
-                    <Text size="medium" weight="bold" margin={{ vertical: 'auto' }}>Guardian Angel</Text>
+                    <Avatar round='auto' src="../../../GAlogo.png" size="small" margin={{ vertical: 'auto' }} onClick={() => window.location.href = "/"}></Avatar>
+                    <Text size="medium" weight="bold" margin={{ vertical: 'auto' }} onClick={() => window.location.href = "/"}>Guardian Angel</Text>
                     <MainHeaderButtons
                         width={this.state.width}
                         signup={this.props.signup}

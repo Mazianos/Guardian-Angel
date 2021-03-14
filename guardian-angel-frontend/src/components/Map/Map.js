@@ -13,8 +13,8 @@ const Marker = () =>
 class Map extends Component {
     static defaultProps = {
         center: {
-            lat: 49.24966,
-            lng: -123.11934
+            lat: 49.283764,
+            lng: -122.793205
         },
         zoom: 11
     };

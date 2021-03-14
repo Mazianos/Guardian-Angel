@@ -51,14 +51,64 @@ function MainHeaderButtons({ width, signup, login, map, faq, logout, contactus }
                 </Box>
                 :
                 <Box direction="row" gap='small' style={{ position: 'absolute', right: '10px', top: '8px' }}>
+                    <Text>{email}</Text>
                     <Menu
                         icon={<Apps></Apps>}
-                        color="red"
-                        items={[
-                            { label: 'Login / Signup', onClick: () => { } },
-                            { label: 'Register', onClick: () => { } },
-                            { label: 'Contact Us', onClick: () => { } },
-                        ]}
+                        plain
+                        items={
+                            email && email != '' ?
+
+                                [
+                                    {
+                                        label: 'Logout', onClick: () => {
+                                            localStorage.setItem('email', ''); setEmail('')
+                                        }
+                                    },
+                                    {
+                                        label: 'Home', onClick: () => {
+                                            window.location.href = "/"
+                                        }
+                                    },
+                                    {
+                                        label: 'FAQ', onClick: () => {
+                                            window.location.href = "faq"
+                                        }
+                                    },
+                                    {
+                                        label: 'Contact Us', onClick: () => {
+                                            window.location.href = "contactus"
+                                        }
+                                    },
+                                ]
+                                :
+                                [
+                                    {
+                                        label: 'Signup', onClick: () => {
+                                            window.location.href = "signup"
+                                        }
+                                    },
+                                    {
+                                        label: 'Login', onClick: () => {
+                                            window.location.href = "login"
+                                        }
+                                    },
+                                    {
+                                        label: 'Home', onClick: () => {
+                                            window.location.href = "/"
+                                        }
+                                    },
+                                    {
+                                        label: 'FAQ', onClick: () => {
+                                            window.location.href = "faq"
+                                        }
+                                    },
+                                    {
+                                        label: 'Contact Us', onClick: () => {
+                                            window.location.href = "contactus"
+                                        }
+                                    },
+                                ]
+                        }
 
                     >
                     </Menu>
