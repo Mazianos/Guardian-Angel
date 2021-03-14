@@ -23,10 +23,6 @@ function Signup() {
         }
     };
 
-    // setTimeout(
-    //     () => setReveal(false),
-    //     200
-    // );
     setTimeout(
         () => setReveal(false),
         10

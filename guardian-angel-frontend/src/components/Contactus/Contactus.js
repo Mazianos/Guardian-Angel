@@ -10,7 +10,15 @@ import 'aos/dist/aos.css';
 function Contactus() {
 
     AOS.init();
+    const [text, setText] = React.useState('');
+    const [value, setValue] = React.useState('');
 
+    const pushToDatabase = async () => {
+        firebase.firestore().collection('Contact-Us').add({
+            contents: value,
+            email: text
+        })
+    };
 
     return (
         <Box background="#7D4CDB" style={{
@@ -45,7 +53,8 @@ function Contactus() {
                                         plain
                                         style={{ borderRadius: "12px" }}
                                         placeholder="type here"
-
+                                        value={text}
+                                        onChange={event => setText(event.target.value)}
                                     />
                                 </Box>
                             </FormField>
@@ -53,7 +62,7 @@ function Contactus() {
 
                         <div data-aos="fade-up-left">
 
-                            <FormField label="Password">
+                            <FormField label="Message">
                                 <Box
                                     direction='row'
                                 >
@@ -61,7 +70,8 @@ function Contactus() {
                                         plain
                                         style={{ borderRadius: "12px" }}
                                         placeholder="type here"
-
+                                        value={value}
+                                        onChange={event => setValue(event.target.value)}
                                     />
                                 </Box>
                             </FormField>
@@ -73,8 +83,9 @@ function Contactus() {
                 <div data-aos="fade-up">
                     <Button
                         type="submit"
-                        label="Login"
+                        label="Submit"
                         secondary
+                        onClick={pushToDatabase}
                     />
                 </div>
             </Box>
